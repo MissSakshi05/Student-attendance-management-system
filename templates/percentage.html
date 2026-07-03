@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Percentage</title>
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Attendance Percentage</h1>
+
+<table>
+
+<tr>
+    <th>Name</th>
+    <th>Roll No</th>
+    <th>Percentage</th>
+</tr>
+
+{% for row in result %}
+<tr>
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+    <td>{{ row[2] }}%</td>
+</tr>
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">
+    <button>Back</button>
+</a>
+
+</div>
+
+</body>
+</html>
